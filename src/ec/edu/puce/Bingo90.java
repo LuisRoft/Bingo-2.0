@@ -77,8 +77,8 @@ public class Bingo90 extends JFrame {
 				JButton randomBall = bingo.getRandomBall();
 				ballNumber.setText(randomBall.getText());
 				
-				int ballPosition = Integer.parseInt(randomBall.getText());
-				JButton bola = (JButton) ballsPanel.getComponent(ballPosition - 1);
+				int ballPosition = Integer.parseInt(randomBall.getText()) -1;
+				JButton bola = (JButton) ballsPanel.getComponent(ballPosition);
 				bingo.getTablero().paintBall(bola);
 			}
 		});

@@ -62,7 +62,7 @@ public class Tablero {
 	}
 	
 	public JButton getBola(int position) {
-		return tablero.get(position - 1);
+		return tablero.get(position);
 	}
 	public int getBallNumbers() {
 		return ballNumbers;
@@ -74,7 +74,7 @@ public class Tablero {
 	
 	public void paintPanel(JPanel panel) {
 		for(int i=0; i < tablero.size(); i++) {
-			panel.add(this.getBola(i + 1));
+			panel.add(this.getBola(i));
 			
 		}
 	}

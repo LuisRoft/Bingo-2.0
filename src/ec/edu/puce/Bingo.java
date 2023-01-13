@@ -16,9 +16,10 @@ public class Bingo {
 		this.setTablero(new Tablero(ballNumbers));
 		this.numbers = new ArrayList<Integer>(90);
 		
-		for (int i = 0; i < 91; i++) 
-			  numbers.add(i); 
-			Collections.shuffle(numbers); 
+		for (int i = 1; i < 91; i++) {
+			numbers.add(i); 
+		}
+		Collections.shuffle(numbers); 
 	}
 
 	public int getBallNumbers() {
@@ -40,7 +41,7 @@ public class Bingo {
 	public JButton getRandomBall() {		
 		int value = numbers.get(0);
 		numbers.remove(0);
-		return tablero.getBola(value);
+		return tablero.getBola(value - 1);
 	}
 
 	public List<Integer> getNumbers() {
